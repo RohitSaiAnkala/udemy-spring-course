@@ -50,5 +50,4 @@ public class UserResource {
 				.toUri();
 		return ResponseEntity.created(location).build();
 	}
-
 }

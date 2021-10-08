@@ -30,19 +30,19 @@ public class UserDaoService {
 
 	public User findOne(int id) {
 		List<User> list = users.stream().filter(user -> user.getId().intValue() == id).collect(Collectors.toList());
-		if(list.isEmpty())
+		if (list.isEmpty())
 			return null;
 		return list.get(0);
 
 	}
+
 	public User deleteById(int id) {
-		for(User user: users) {
-			if(user.getId()==id) {
+		for (User user : users) {
+			if (user.getId() == id) {
 				users.remove(user);
 				return user;
+			}
 		}
-	}
 		return null;
 	}
-
 }
