@@ -34,4 +34,5 @@ public class CustomizedResponseEntityExceptionHandler
 				request.getDescription(false));
 		return ResponseEntity.status(HttpStatus.NOT_FOUND).body(exceptionResponse);
 	}
+	
 }
