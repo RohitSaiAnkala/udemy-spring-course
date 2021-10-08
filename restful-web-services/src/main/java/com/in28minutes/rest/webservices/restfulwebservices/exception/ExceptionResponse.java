@@ -26,4 +26,5 @@ public class ExceptionResponse {
 	public String getDetails() {
 		return details;
 	}
+
 }
