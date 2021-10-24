@@ -29,7 +29,8 @@ public class UserDaoService {
 	}
 
 	public User findOne(int id) {
-		List<User> list = users.stream().filter(user -> user.getId().intValue() == id).collect(Collectors.toList());
+		List<User> list = users.stream().filter(user -> user.getId().intValue() == id)
+				.collect(Collectors.toList());
 		if (list.isEmpty())
 			return null;
 		return list.get(0);
