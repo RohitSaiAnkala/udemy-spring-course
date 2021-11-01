@@ -54,12 +54,9 @@ public class UserResource {
 
 	@PostMapping("/users")
 	public ResponseEntity createUser(@Valid @RequestBody User user) {
-		System.out.println("In users post method");
 		User savedUser = userService.save(user);
-		System.out.println(savedUser);
 		URI location = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(savedUser.getId())
 				.toUri();
-		System.out.println(location);
 		return ResponseEntity.created(location).build();
 	}
 
